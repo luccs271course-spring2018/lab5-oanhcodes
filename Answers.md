@@ -17,5 +17,5 @@ Instead of using Node, we can create a new instance of LinkedList. To implement 
 
 #### 4. Is it better for push and pop to return the item or the stack itself? Briefly discuss the pros and cons of each design.
 
-It is better for push and pop to return the item instead of the stack itself. By doing so, we know exactly what item was inserted or removed. When working with stacks, we are only concerned with the top most item because of the last in first out principle. A con of not returning whole stack is that we don't have a easy way to determine the size of the collection.
+It is better for push and pop to return the item instead of the stack itself. By doing so, we know exactly what item was inserted or removed. When working with stacks, we are only concerned with the top most item because of the last in first out principle. This means it would be more performant to return just one item. Some pros of returning the stack itself is we can see the new updated stack, however, if the stack is very large, it would not be very efficient.
 
