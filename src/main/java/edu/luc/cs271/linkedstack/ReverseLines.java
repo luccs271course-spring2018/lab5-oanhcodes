@@ -1,11 +1,10 @@
 package edu.luc.cs271.linkedstack;
 
 import java.util.Scanner;
-import java.util.*;
 
 public class ReverseLines {
 
-    private static Deque<String> inputStack = new ArrayDeque<>();;
+    private static LinkedStack<String> inputStack = new LinkedStack<>();
 
     public static void main(String[] args) {
 
@@ -22,6 +21,7 @@ public class ReverseLines {
                 fillStack(line);
             }
         }
+
         printReverse(inputStack);
     }
 
@@ -29,10 +29,9 @@ public class ReverseLines {
         inputStack.push(inputString);
     }
 
-    public static void printReverse(Deque<String> lineStack ){
-        while(!lineStack.isEmpty()) {
+    public static void printReverse(LinkedStack<String> lineStack) {
+        while (!lineStack.isEmpty()) {
             System.out.println(lineStack.pop());
         }
     }
-
 }
