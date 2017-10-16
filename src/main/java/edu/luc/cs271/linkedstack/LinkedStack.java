@@ -1,14 +1,14 @@
 package edu.luc.cs271.linkedstack;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
-
 
 public class LinkedStack<E> implements IStack<E> {
 
   /** The topmost node of this stack. The stack gets pushed down from here. */
   private Node<E> top;
+
   private List<E> dataList;
 
   // Done why don't we need an explicit constructor?
@@ -17,8 +17,8 @@ public class LinkedStack<E> implements IStack<E> {
   a LinkedStack works by referencing and adapting the topOfStackReference. No instance of LinkedList needs to made
   because the collection is made of individual Node objects. */
 
-
-  // Reset topmost node of the stack with a new node and then set its next reference as the old topmost node
+  // Reset topmost node of the stack with a new node and then set its next reference as the old
+  // topmost node
   @Override
   public E push(final E obj) {
     top = new Node<>(obj, top);
@@ -57,8 +57,8 @@ public class LinkedStack<E> implements IStack<E> {
     return top == null;
   }
 
-  //Set data list as a new ArrayList collection
-  //While the top is not equal to null, add it to the ArrayList
+  // Set data list as a new ArrayList collection
+  // While the top is not equal to null, add it to the ArrayList
   @Override
   public List<E> asList() {
     dataList = new ArrayList<>();
@@ -68,5 +68,4 @@ public class LinkedStack<E> implements IStack<E> {
     }
     return dataList;
   }
-
 }
