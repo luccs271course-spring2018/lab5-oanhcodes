@@ -19,7 +19,7 @@ jar {
     manifest {
         attributes 'Main-Class': mainClassName
     }
-}    
+}
 
 repositories {
     jcenter()
@@ -35,4 +35,8 @@ tasks.withType(JavaCompile) {
 
 tasks.withType(JavaExec) {
     jvmArgs << "-enableassertions"
+}
+
+googleJavaFormat {
+    toolVersion = '1.4'
 }
