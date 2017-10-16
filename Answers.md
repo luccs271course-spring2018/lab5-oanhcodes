@@ -3,7 +3,7 @@
 
 #### 1. Why don't we need an explicit constructor?
 
-Unlike a ListStack which explicitly calls methods on an instance of ArrayList to manipulate a stack, a LinkedStack works by referencing and adapting the top most reference/node.
+Unlike a ListStack which explicitly calls methods on an instance of ArrayList to manipulate a stack, a LinkedStack works by referencing and adapting the top most reference/node. When pushing into a LinkedStack, we're create a whole new node.
 
 #### 2. What is the time and (extra) space complexity of each of the LinkedStack methods, as well as ReverseLines.main?
 
